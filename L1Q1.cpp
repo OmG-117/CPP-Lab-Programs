@@ -23,7 +23,7 @@ void main() {
 
   avg = distance/qty;
 
-  cout<<"The average is = "<<avg<<"Km/L";
+  cout<<"The average is "<<avg<<"Km/L";
 
   getch();
 }
