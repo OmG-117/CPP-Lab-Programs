@@ -14,7 +14,7 @@ void main() {
 
   float qty, distance;
 
-  cout<<"Enter fuel quantity used = ";
+  cout<<"Enter quantity of fuel = ";
   cin>>qty;
   cout<<"Enter distance travelled = ";
   cin>>distance;
@@ -31,8 +31,6 @@ void main() {
 /*
 OUTPUT:
 Enter quntity of fuel = 10
-
-Enter distance travelled by car = 100
-
+Enter distance travelled = 100
 The average is 10Km/L
 */
