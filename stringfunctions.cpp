@@ -5,9 +5,7 @@ int strlength(char len[])
 {
  int length=0;
  for (int i=0; len[i] !='\0'; i++)
- {
   length++;
- }
 
  return length;
 }
@@ -16,9 +14,7 @@ void strsub(char sub[], int startpos, int endpos)
 {
  cout<<endl<<"The required string is : ";
  for(int k=startpos-1; k<=endpos-1; k++)
- {
    cout<<sub[k];
- }
 }
 
 void strcopy(char copy[])
@@ -27,15 +23,12 @@ void strcopy(char copy[])
 
  cout<<endl<<"The copied string is : ";
  for(int i=0; copy[i]!='\0'; i++)
- {
   paste[i]=copy[i];
- }
+ 
  paste[i]='\0';
 
  for(int a=0; paste[a]!='\0'; a++)
- {
   cout<<paste[a];
- }
 }
 
 void strconcat(char x[], char y[])
@@ -43,9 +36,7 @@ void strconcat(char x[], char y[])
  char concat[200];
 
  for (int b=0; x[b]!='\0'; b++)
- {
   concat[b]=x[b];
- }
 
  int d=0;
  while (y[d]!='\0')
@@ -60,9 +51,7 @@ void strconcat(char x[], char y[])
  cout<<endl<<"The concatenated string is : ";
 
  for(int c=0; concat[c]!='\0'; c++)
- {
   cout<<concat[c];
- }
 }
 
 void main()
