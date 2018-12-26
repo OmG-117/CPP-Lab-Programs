@@ -1,7 +1,3 @@
-/*
-UNDER DEVELOPMENT
-*/
-
 #include<iostream.h>
 #include<conio.h>
 
@@ -77,9 +73,7 @@ void main()
       else
 	cout << "Invalid indices" << endl;
     }
-
     grid[movex][movey] = type;
-
     displaygrid(grid);
     if (checkWin(grid))
       break;
