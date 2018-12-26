@@ -1,13 +1,5 @@
 /*
-
-
-
-
 UNDER DEVELOPMENT
-
-
-
-
 */
 
 #include<iostream.h>
@@ -37,19 +29,19 @@ int checkWin(char grid[3][3])
 {
   for (int i = 0; i < 3; i++)
   {
-    if (grid[i][0] == grid[i][1] && grid[i][2] == grid[i][1])
+    if (grid[i][0] == grid[i][1] && grid[i][2] == grid[i][1] && grid[i][0]!='-')
       return 1;
   }
 
   for (int j = 0; j < 3; j++)
   {
-    if (grid[0][j] == grid[1][j] && grid[2][j] == grid[1][j])
+    if (grid[0][j] == grid[1][j] && grid[2][j] == grid[1][j] && grid[0][j]!='-')
       return 1;
   }
 
-  if (grid[0][0] == grid[1][1] && grid[2][2] == grid[1][1])
+  if (grid[0][0] == grid[1][1] && grid[2][2] == grid[1][1] && grid[0][0]!='-')
     return 1;
-  if (grid[0][2] == grid[1][1] && grid[2][0] == grid[1][1])
+  if (grid[0][2] == grid[1][1] && grid[2][0] == grid[1][1] && grid[2][0]!='-')
     return 1;
 
   return 0;
@@ -85,7 +77,9 @@ void main()
       else
 	cout << "Invalid indices" << endl;
     }
+
     grid[movex][movey] = type;
+
     displaygrid(grid);
     if (checkWin(grid))
       break;
