@@ -89,10 +89,7 @@ void main()
     grid[movex][movey] = type;
     displaygrid(grid);
     
-    if (checkWin(grid) && checkWin(grid)!=2)
-      break;
-    
-    else if (checkWin(grid)==2)
+    if (checkWin(grid) || checkWin(grid)==2)
       break;
 
     switchType(type);
