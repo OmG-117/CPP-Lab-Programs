@@ -23,6 +23,17 @@ void switchType(char &x)
 
 int checkWin(char grid[3][3])
 {
+  int count = 0;
+  
+  for (int q = 0; q < 3; q++)
+  {
+      for (int r = 0; r < 3; r++)
+      {
+          if (grid[r][q]=='-')
+            count++;
+      } 
+  }
+	
   for (int i = 0; i < 3; i++)
   {
     if (grid[i][0] == grid[i][1] && grid[i][2] == grid[i][1] && grid[i][0]!='-')
