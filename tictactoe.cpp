@@ -39,6 +39,8 @@ int checkWin(char grid[3][3])
     return 1;
   if (grid[0][2] == grid[1][1] && grid[2][0] == grid[1][1] && grid[2][0]!='-')
     return 1;
+  else if (count==0)
+    return 2;
 
   return 0;
 }
@@ -75,13 +77,21 @@ void main()
     }
     grid[movex][movey] = type;
     displaygrid(grid);
-    if (checkWin(grid))
+    
+    if (checkWin(grid) && checkWin(grid)!=2)
+      break;
+    
+    else if (checkWin(grid)==2)
       break;
 
     switchType(type);
     t++;
   }
-  cout << endl << endl << type << " wins!";
+  if (checkWin(grid)==2)
+      cout << endl << endl << "It's a draw.";
+      
+  else if (checkWin(grid)==1)
+      cout << endl << endl << type << " wins!";
 
   getch();
 
