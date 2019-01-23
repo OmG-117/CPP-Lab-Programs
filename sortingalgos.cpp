@@ -65,7 +65,7 @@ void insertion(int a[], int n)
 
 void main()
 {
-	getch();
+	clrscr();
 
 	int N;
 	int numbers[1000];
@@ -82,5 +82,7 @@ void main()
 	selection(numbers,N);
 	cout<<endl << "Insertion Sort";
 	insertion(numbers,N);
+	
+	getch();
 
 }
